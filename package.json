@@ -1,0 +1,33 @@
+{
+  "name": "relajet-graphql-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start:dev": "NODE_ENV=development webpack --config ./build/webpack.config.dev.js ./src/index.js",
+    "start:prod": "NODE_ENV=production webpack --config ./build/webpack.config.prod.js ./src/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "relajet",
+  "license": "ISC",
+  "private": true,
+  "dependencies": {
+    "koa": "^2.5.1",
+    "koa-bodyparser": "^4.2.0",
+    "koa-compose": "^4.0.0",
+    "koa-cors": "^0.0.16",
+    "koa-helmet": "^4.0.0",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^7.1.4",
+    "babel-preset-env": "^1.6.1",
+    "start-server-webpack-plugin": "^2.2.5",
+    "webpack": "^4.6.0",
+    "webpack-cli": "^2.1.2",
+    "webpack-merge": "^4.1.2",
+    "webpack-node-externals": "^1.7.2"
+  }
+}
