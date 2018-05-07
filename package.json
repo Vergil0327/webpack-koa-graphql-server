@@ -13,8 +13,8 @@
     "run-node": "node dist/server.build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "relajet",
-  "license": "ISC",
+  "author": "vergil",
+  "license": "MIT",
   "private": true,
   "dependencies": {
     "@koa/cors": "^2.2.1",
