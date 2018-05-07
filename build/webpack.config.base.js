@@ -1,7 +1,10 @@
 const webpack = require('webpack');
+const path = require('path');
 const nodeExternals = require('webpack-node-externals');
+const CleanWebpackPlugin = require('clean-webpack-plugin')
 
 const nodeEnv = process.env.NODE_ENV;
+const ROOT_PATH = path.resolve(__dirname, '..');
 
 module.exports = {
   mode: nodeEnv,
@@ -20,13 +23,14 @@ module.exports = {
       {
         test: /\.js?$/,
         use: {
-          loader: 'babel-loader'
+          loader: 'babel-loader',
         },
         exclude: /node_modules/
       }
     ]
   },
   plugins: [
+    new CleanWebpackPlugin([path.resolve(ROOT_PATH, 'dist')], { root: ROOT_PATH}),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify(nodeEnv),
